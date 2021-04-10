@@ -30,4 +30,12 @@ return [
         'region' => env('AWS_DEFAULT_REGION', 'us-east-1'),
     ],
 
+    'authors' => [
+        'base_uri' => env('AUTHORS_SERVICE_BASE_URL'),
+    ],
+
+    'books' => [
+        'base_uri' => env('BOOKS_SERVICE_BASE_URL'),
+    ]
+
 ];
