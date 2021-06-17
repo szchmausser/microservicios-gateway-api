@@ -12,17 +12,13 @@ class BookService
 {
     use ConsumesExternalService;
 
-    /**
-     * @var \Illuminate\Config\Repository|\Illuminate\Contracts\Foundation\Application|mixed
-     */
     public $baseUri;
+    public $secret;
 
-    /**
-     * BookService constructor.
-     */
     public function __construct()
     {
         $this->baseUri = config('services.books.base_uri');
+        $this->secret = config('services.books.secret');
     }
 
     /**

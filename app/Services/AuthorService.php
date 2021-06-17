@@ -12,17 +12,13 @@ class AuthorService
 {
     use ConsumesExternalService;
 
-    /**
-     * @var \Illuminate\Config\Repository|\Illuminate\Contracts\Foundation\Application|mixed
-     */
     public $baseUri;
+    public $secret;
 
-    /**
-     * AuthorService constructor.
-     */
     public function __construct()
     {
         $this->baseUri = config('services.authors.base_uri');
+        $this->secret = config('services.authors.secret');
     }
 
     /**
